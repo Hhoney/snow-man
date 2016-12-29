@@ -1,9 +1,6 @@
-@keyframes myfirst{
-    from {left: 143px};
-    to {left: 147px};
-}
 body {
-    background: #c8e8fc;
+    /*background: #c8e8fc;*/
+    background: #000;
 }
 .box {
     width: 400px;
@@ -11,6 +8,34 @@ body {
     position: absolute;
     left: calc(50% - (200px) * 1);;
     top: calc(50% - (250px) * 1);
+    /*transition: all .5s ease-in;*/
+}
+/*.box:hover {
+    transform: rotate(10deg);
+}*/
+.box:hover .leftHead {
+    transform: rotate(-45deg);
+}
+.box:hover .rightHead {
+    transform: rotate(45deg);
+}
+.box:hover .lt {
+    left: 7px;
+}
+.box:hover .lb {
+    left: 14px;
+}
+.box:hover .rt {
+    left: 7px;
+}
+.box:hover .rb {
+    left: 14px;
+}
+.box:hover .grass {
+    transform: rotate(-50deg);
+}
+.box:hover .heart {
+    transform: rotate(55deg);
 }
 .hat {
     width: 160px; 
@@ -23,7 +48,6 @@ body {
     border-radius: 70% 4% 70% 0%;
 }
 .ball {
-    animation: myfirst .4s infinite linear;
     width: 20px; 
     height: 20px;
     background: #fff;
@@ -44,9 +68,294 @@ body {
     z-index: 1;
     box-shadow: 0px 0px 2px 2px #fff;
 }
+.edge {
+    width: 150px;
+    height: 34px;
+    background: #d7d7ec;
+    border-radius: 50% 50% 0 0;
+    position: absolute;
+    left: 32px;
+    top: 34px;
+    z-index: 1;
+    transform: rotate(40deg);
+    box-shadow: 0px 0px 3px 3px #fff inset;
+}
+.grass {
+    width: 10px;
+    height: 30px;
+    position: absolute;
+    background: #7fc77f;
+    left: 22px;
+    top: 0;
+    transform: rotate(-40deg);
+    border-radius: 0% 0% 30% 0%;
+    transition: all .2s ease-in;
+}
+.grass div:nth-child(1) {
+    width: 30px;
+    height: 20px;
+    background: #7fc77f;
+    position: absolute;
+    left: -19px;
+    top: -7px;
+    border-radius: 80% 99% 99% 80%;
+    transform: rotate(40deg);
+    box-shadow: 1px -3px 4px #4d754d inset;
+}
+.grass div:nth-child(2) {    
+    width: 30px;
+    height: 20px;
+    background: #7fc77f;
+    position: absolute;
+    left: 2px;
+    top: -6px;
+    border-radius: 99% 80% 80% 99%;
+    transform: rotate(-30deg);
+    box-shadow: -1px -3px 4px #4d754d inset;
+}
+.grass div:nth-child(3) {    
+    width: 4px;
+    height: 4px;
+    background: #9be89b;
+    position: absolute;
+    left: -4px;
+    top: 4px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 1px 1px #9be89b;
+}
+.grass div:nth-child(4) {    
+    width: 8px;
+    height: 4px;
+    background: #9be89b;
+    position: absolute;
+    left: -6px;
+    top: -6px;
+    border-radius: 0 0 50% 50%;
+    box-shadow: 0px 0px 2px 2px #9be89b;
+    transform: rotate(30deg);
+}
+.leftEye {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: 46px;
+    top: 68px;
+    background: rgb(123, 43, 43);
+    border-radius: 50%;
+}
+.rightEye {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: 150px;
+    top: 68px;
+    background: rgb(123, 43, 43);
+    border-radius: 50%;
+}
+.leftEye div:nth-child(1) {
+    width: 10px;
+    height: 10px;
+    background: #fff;
+    border-radius: 50%;
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    box-shadow: 0px 0px 1px #fff;
+    transition: all .2s ease-in;
+}
+.leftEye div:nth-child(2) {
+    width: 5px;
+    height: 5px;
+    background: #fff;
+    border-radius: 50%;
+    position: absolute;
+    left: 17px;
+    top: 20px;
+    box-shadow: 0px 0px 1px #fff;
+    transition: all .2s ease-in;
+}
+.rightEye div:nth-child(1) {
+    width: 10px;
+    height: 10px;
+    background: #fff;
+    border-radius: 50%;
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    box-shadow: 0px 0px 1px #fff;
+    transition: all .2s ease-in;
+}
+.rightEye div:nth-child(2) {
+    width: 5px;
+    height: 5px;
+    background: #fff;
+    border-radius: 50%;
+    position: absolute;
+    left: 17px;
+    top: 20px;
+    box-shadow: 0px 0px 1px #fff;
+    transition: all .2s ease-in;
+}
+.leftFace {
+    position: absolute;
+    left: 43px;
+    top: 122px;
+    width: 5px;
+    height: 5px;
+    background: #facccc;
+    border-radius: 50%;
+    box-shadow: 0px 0px 18px 18px #facccc;
+}
+.leftFace div:nth-child(1) {
+    width: 3px;
+    height: 3px;
+    background: #fff;
+    position: absolute;
+    left: -5px;
+    top: -6px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 1px 1px #fff;
+}
+.leftFace div:nth-child(2) {
+    width: 3px;
+    height: 3px;
+    background: #fff;
+    position: absolute;
+    left: 2px;
+    top: -6px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 1px 1px #fff;
+}
+.rightFace div:nth-child(1) {
+    width: 3px;
+    height: 3px;
+    background: #fff;
+    position: absolute;
+    left: -5px;
+    top: -6px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 1px 1px #fff;
+}
+.rightFace div:nth-child(2) {
+    width: 3px;
+    height: 3px;
+    background: #fff;
+    position: absolute;
+    left: 2px;
+    top: -6px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 1px 1px #fff;
+}
+.rightFace {
+    position: absolute;
+    right: 60px;
+    top: 122px;
+    width: 5px;
+    height: 5px;
+    background: #facccc;
+    border-radius: 50%;
+    box-shadow: 0px 0px 18px 18px #facccc;
+}
+.nose {
+    width: 57px;
+    height: 30px;
+    background: #f0ba72;
+    position: absolute;
+    top: 72px;
+    left: 82px;
+    border-radius: 99% 60% 50% 50%;
+    box-shadow: -1px -1px 3px 3px #ecab53 inset;
+}
+.mouth {
+    width: 15px;
+    height: 5px;
+    border: 4px solid #e87575;
+    border-top: none;
+    border-radius: 0 0 30px 30px;
+    position: absolute;
+    top: 125px;
+    left: 101px;
+    transform: rotate(-7deg);
+}
+.scarf {
+    width: 245px;
+    height: 28px;
+    background: #ff0000;
+    border: 5px solid #000;
+    border-top-left-radius: 195px 100px;
+    border-bottom-left-radius: 237px 146px;
+    border-top-right-radius: 195px 100px;
+    border-bottom-right-radius: 269px 146px;
+    position: absolute;
+    bottom: 204px;
+    left: 72px;
+    z-index: 2;
+}
+.scarf1 {
+    width: 234px;
+    height: 44px;
+    position: absolute;
+    background: #000;
+    top: -21px;
+    left: 7px;
+    border-radius: 50%;
+    border: 1px #000 solid;
+}
+.scarf2 {
+    width: 222px;
+    height: 42px;
+    position: absolute;
+    background: red;
+    top: 0px;
+    left: 5px;
+    border-radius: 50%;
+}
+.pocket {
+    width: 58px;
+    height: 78px;
+    position: absolute;
+    top: 293px;
+    left: 115px;
+    border: 3px solid #000;
+    background: red;
+    border-top-left-radius: 20px 52px;
+    border-bottom-left-radius: 40px 40px;
+    border-top-right-radius: 0px 0px;
+    border-bottom-right-radius: 21px 21px;
+    z-index: 2;
+}
+.pocket1 {
+    width: 11px;
+    height: 43px;
+    border-bottom-left-radius: 29px 57px;
+    border-top-left-radius: 0px 0px;
+    border: 9px solid #000;
+    border-top: none;
+    border-right: none;
+    position: absolute;
+    top: 0px;
+    left: 30px;
+    -webkit-transform: rotateZ(10deg);
+    -moz-transform: rotateZ(10deg);
+    -ms-transform: rotateZ(10deg);
+    -o-transform: rotateZ(10deg);
+    transform: rotateZ(10deg);
+}
+.pocket2 {
+    width: 2px;
+    height: 45px;
+    border-bottom-left-radius: 11px 24px;
+    border-top-left-radius: 10px 15px;
+    border: 9px solid red;
+    border-top: none;
+    border-right: none;
+    position: absolute;
+    top: 0px;
+    left: 2px;
+}
 .body {
     width: 300px; 
-    height:250px;
+    height: 250px;
     background: #fff;
     border-radius: 50%;
     position: absolute;
@@ -54,4 +363,110 @@ body {
     top: 250px;
     z-index: 1;    
     box-shadow: 0px 0px 2px 2px #fff;
+}
+.btn {
+    position: absolute;
+    left: 140px;
+    top: 83px;
+    width: 20px;
+    height: 100px;
+}
+.btn div {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #6b5f5f;
+    margin-top: 14px;
+    box-shadow: 0px 0px 3px #6b5f5f;
+}
+.heart {
+    width: 20px; 
+    height: 20px;
+    background: red;
+    transform: rotate(45deg);
+    position: absolute;
+    left: 212px;
+    top: 92px;
+    box-shadow: 0px 0px 1px 1px red;
+    transition: all .2s ease-in;
+}
+.heart div:nth-child(1){
+    background: red;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
+    left: -10px;
+    top: 0;
+    box-shadow: 0px 0px 1px 1px red;
+}
+.heart div:nth-child(2){
+    background: red;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    top: -10px;
+    box-shadow: 0px 0px 1px 1px red;
+}
+.leftHead {
+    width: 8px;
+    height: 64px;
+    background: #966666;
+    border-radius: 10px;
+    transform: rotate(-40deg);
+    position: absolute;
+    left: 3px;
+    top: 31px;
+    transition: all .3s ease-in; 
+}
+.rightHead {
+    width: 8px;
+    height: 64px;
+    background: #966666;
+    border-radius: 10px;
+    transform: rotate(40deg);
+    position: absolute;
+    right: 3px;
+    top: 31px;
+    transition: all .3s ease-in; 
+}
+.leftHead div:nth-child(1) {
+    width: 50px;
+    height: 70px;
+    background: red;
+    border-radius: 70% 70% 80% 80%;
+    position: absolute;
+    left: -18px;
+    top: -66px;
+}
+.leftHead div:nth-child(2) {
+    width: 40px;
+    height: 30px;
+    background: red;
+    border-radius: 50% 50% 50% 50%;
+    position: absolute;
+    left: 1px;
+    top: -29px;
+    transform: rotate(-30deg);
+}
+.rightHead div:nth-child(1) {
+    width: 50px;
+    height: 70px;
+    background: red;
+    border-radius: 70% 70% 80% 80%;
+    position: absolute;
+    right: -18px;
+    top: -66px;
+}
+.rightHead div:nth-child(2) {
+    width: 40px;
+    height: 30px;
+    background: red;
+    border-radius: 50% 50% 50% 50%;
+    position: absolute;
+    right: 1px;
+    top: -29px;
+    transform: rotate(30deg);
 }
